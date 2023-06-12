@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Nail Disease Detection System</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{{url_for('static',filename="assets/img/1.png")}}" rel="icon">
+  <link href="{{url_for('static',filename="assets/img/apple-touch-icon.png")}}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  
+
+  <link href="{{url_for('static',filename="assets/vendor/aos/aos.css")}}" rel="stylesheet">
+  <link href="{{url_for('static',filename="assets/vendor/bootstrap/css/bootstrap.min.css")}}" rel="stylesheet">
+  <link href="{{url_for('static',filename="assets/vendor/bootstrap-icons/bootstrap-icons.css")}}" rel="stylesheet">
+  <link href="{{url_for('static',filename="assets/vendor/boxicons/css/boxicons.min.css")}}" rel="stylesheet">
+  <link href="{{url_for('static',filename="assets/vendor/glightbox/css/glightbox.min.css")}}" rel="stylesheet">
+  <link href="{{url_for('static',filename="assets/vendor/remixicon/remixicon.css")}}" rel="stylesheet">
+  <link href="{{url_for('static',filename="assets/vendor/swiper/swiper-bundle.min.css")}}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{{url_for('static',filename="assets/css/style.css")}}" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center justify-content-lg-between">
+
+      <a href="/" class="logo me-auto me-lg-0"><img src="{{url_for('static',filename="assets/img/1.png")}}" alt="" class="img-fluid"></a> 
+      <h1 class="logo me-auto me-lg-0"><a href="/">NailCheck<span>.</span></a></h1>
+
+      
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact Us</a></li>
+          <li><a class="nav-link scrollto" style= "position: relative; left: 150px" href="http://127.0.0.1:5000/UpAndPredict">Upload & Predict</a></li>
+          
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+      <a class="get-started-btn "style= "position: relative; left: 90px;" href="/login">Login</a>
+      <a href="/sign-up" class="get-started-btn scrollto">Register</a>
+
+    </div>
+  </header><!-- End Header -->
+
+  <div class="containter">
+  {% block contents %}
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center justify-content-center">
+    <div class="container" data-aos="fade-up">
+
+      <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
+        <div class="col-xl-8 col-lg-10">
+          <h1>A Start to Redifine Medical Diagnosis using ML<span>.</span></h1>
+          <h2>This tool predicts medical conditions related to Human Nails using the Concept of Machine Learning </h2>
+        </div>
+      </div>
+
+      <div class="row gy-4 mt-5 justify-content-center" data-aos="zoom-in" data-aos-delay="250">
+        <div class="col-xl-2 col-md-4">
+          <div class="icon-box">
+            <i class="ri-store-line"></i>
+            <h3><a href="">Accurate Analysis</a></h3>
+          </div>
+        </div>
+        <div class="col-xl-2 col-md-4">
+          <div class="icon-box">
+            <i class="ri-bar-chart-box-line"></i>
+            <h3><a href="">User-Friendly Interface</a></h3>
+          </div>
+        </div>
+        <div class="col-xl-2 col-md-4">
+          <div class="icon-box">
+            <i class="ri-calendar-todo-line"></i>
+            <h3><a href="">Quick Results</a></h3>
+          </div>
+        </div>
+        <div class="col-xl-2 col-md-4">
+          <div class="icon-box">
+            <i class="ri-paint-brush-line"></i>
+            <h3><a href="">Educational Resources</a></h3>
+          </div>
+        </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+          <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+            <img src="{{url_for('static',filename="assets/img/about.png")}}" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right" data-aos-delay="100">
+            <h3>Welcome to NailCheck!</h3>
+            <p class="fst-italic">
+At NailCheck, we are dedicated to revolutionizing the detection and diagnosis of nail diseases using the power of machine learning (ML) technology. Our web application provides a user-friendly and efficient way to identify various nail conditions, empowering individuals to take control of their nail health.
+
+<h3>Our Mission</h3>
+Our mission is to enhance the early detection and prevention of nail diseases by leveraging the capabilities of ML algorithms. We strive to make nail health assessment accessible, accurate, and convenient for everyone. By providing reliable and timely information, we aim to improve overall well-being and promote proactive nail care.
+            </p>
+            <ul>
+              <li><i class="ri-check-double-line"></i>Our ML models are designed to deliver accurate and reliable results, providing insights into potential nail diseases with high precision.</li>
+              <li><i class="ri-check-double-line"></i> User-Friendly Interface: We prioritize usability, ensuring that our web application is intuitive and easy to navigate. Simply follow the instructions to capture and upload images of your nails, and our system will handle the rest.</li>
+              <li><i class="ri-check-double-line"></i>User-Friendly Interface: We prioritize usability, ensuring that our web application is intuitive and easy to navigate. Simply follow the instructions to capture and upload images of your nails, and our system will handle the rest.</li>
+              <li><i class="ri-check-double-line"></i>NailCheck is committed to raising awareness about nail health. We provide informative articles and resources to help you understand common nail conditions, prevention techniques, and recommended treatments.</li>
+            </ul>
+            <p>
+              We invite you to join our growing community of individuals who prioritize nail health and early detection. By using NailCheck, you can proactively monitor your nail condition, catch potential issues early on, and make informed decisions about your nail health.
+             <br><br> Take the first step towards healthier nails today with NailCheck!
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Clients Section ======= -->
+    <section id="clients" class="clients">
+      <div class="container" data-aos="zoom-in">
+
+        <div class="clients-slider swiper">
+          <div class="swiper-wrapper align-items-center">
+            <div class="swiper-slide"><img src="{{ url_for('static', filename='assets/img/clients/1.png') }}" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="{{ url_for('static', filename='assets/img/clients/2.png') }}" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="{{ url_for('static', filename='assets/img/clients/3.png') }}" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="{{ url_for('static', filename='assets/img/clients/4.png') }}" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="{{ url_for('static', filename='assets/img/clients/5.png') }}" class="img-fluid" alt=""></div>
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section><!-- End Clients Section -->
+
+   
+          <!-- ======= Contact Section ======= -->
+          <section id="contact" class="contact">
+            <div class="container" data-aos="fade-up">
+      
+              <div class="section-title">
+                <h2>Contact</h2>
+                <p>Contact Us</p>
+              </div>
+      
+              <div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15715.491138629102!2d76.31929670677644!3d10.027355321294836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080c5a87044b5d%3A0x1d45e225cbbc660a!2sModel%20Engineering%20College%2C%20Thrikkakara%2C%20Edappally%2C%20Kochi%2C%20Kerala%20682021!5e0!3m2!1sen!2sin!4v1686415068679!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+      
+              <div class="row mt-5">
+      
+                <div class="col-lg-4">
+                  <div class="info">
+                    <div class="address">
+                      <i class="bi bi-geo-alt"></i>
+                      <h4>Location:</h4>
+                      <p>Govt. Model Engineering College, Thrikkakara</p>
+                    </div>
+      
+                    <div class="email">
+                      <i class="bi bi-envelope"></i>
+                      <h4>Email:</h4>
+                      <p>principal@mec.ac.in</p>
+                    </div>
+      
+                    <div class="phone">
+                      <i class="bi bi-phone"></i>
+                      <h4>Call:</h4>
+                      <p>+91 -12345678910</p>
+                    </div>
+      
+                  </div>
+      
+                </div>
+  <!-- End Contacts Session-->    
+    
+
+
+
+
+
+
+  </main><!-- End #main -->
+
+  {% endblock %}
+</div>
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-info">
+              <h3>NailCheck<span>.</span></h3>
+              <p>
+                Model Engineering College, <br>
+                Thrikkakara, 682021 ,Cochin<br><br>
+                <strong>Phone:</strong> +91-12345678910<br>
+                <strong>Mail:</strong> mec.ac.in<br>
+              </p>
+              <div class="social-links mt-3">
+                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+    
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Group - 3</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/gp-free-multipurpose-html-bootstrap-template/ -->
+        Designed by <a href="">GP3 - CS6B (2024) </a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+s
+  <!-- Vendor JS Files -->
+  <script src="{{ url_for('static', filename='assets/vendor/purecounter/purecounter_vanilla.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/vendor/aos/aos.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/vendor/glightbox/js/glightbox.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/vendor/swiper/swiper-bundle.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/vendor/php-email-form/validate.js') }}"></script>
+
+
+  <!-- Template Main JS File -->
+  <script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+ 
+</body>
+
+</html>

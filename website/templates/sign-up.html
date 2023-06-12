@@ -1,0 +1,56 @@
+{% extends "home.html" %}
+{% block contents %} <section id="hero" class="d-flex align-items-center justify-content-center">
+    <section id="contact" class="contact">
+        <div class="container" data-aos="fade-up">
+    <div class="row-lg-5 mt-8 mt-lg-0">
+
+        <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+          <div class="row" style="max-width:500px;">
+            <h2 style="text-align: center; font-size: 40px; font-weight: 1000; color: #ffc451 ;">Sign-Up</h2>
+            <h5>Name: </h5>
+            <div class="col-md-30 form-group">
+              <input type="text" name="name" class="form-control" id="name" placeholder="Enter Name" required>
+            </div>
+            <h5>Email: </h5>
+            <div class="col-md-30 form-group mt-15 mt-md-0">
+              <input type="email" class="form-control" name="email" id="email" placeholder="Enter Email" required>
+            </div>
+            <h5>Password: </h5>
+            <div class="form-group mt-15">
+                <input type="password" class="form-control" name="password" id="password" placeholder="Enter Password" required>
+            </div>
+            <h5>Confirm Password: </h5>
+            <div class="form-group mt-15">
+              <input type="password" class="form-control" name="password2" id="password2" placeholder="Confirm Password" required>
+          </div>
+
+          <div class="radio">
+            <h5>User Type:  </h5>
+            <label>
+              <input type="radio" name="user" value="Doctor">
+              <p>Doctor</p>
+            </label>
+            
+            <label>
+              <input type="radio" name="user" value="Patient">
+              <p>Patient </p>
+            </label>
+          </div>
+
+        </div>
+       
+          
+          <div class="my-30">
+            <div class="loading">Loading</div>
+            <div class="error-message"></div>
+            <div class="sent-message">Your message has been sent. Thank you!</div>
+          </div>
+          <div class="text-center"><button type="submit">SIGN-UP</button></div>
+        </form>
+
+      </div>
+    </div>
+</section><!-- End Contact Section -->
+
+</section>
+{% endblock %}
