@@ -1,4 +1,29 @@
 {% extends "home.html" %}
+{%  block navbar %}
+<header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center justify-content-lg-between">
+  
+      <a href="/" class="logo me-auto me-lg-0"><img src="{{url_for('static',filename="assets/img/1.png")}}" alt="" class="img-fluid"></a> 
+      <h1 class="logo me-auto me-lg-0"><a href="/">NailCheck<span>.</span></a></h1>
+  
+      
+  
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto active" href="/">Home</a></li>
+          <li><a class="nav-link scrollto" href="/">About</a></li>
+          <li><a class="nav-link scrollto" href="/">Contact Us</a></li>
+          <li><a class="nav-link scrollto" style= "position: relative; left: 150px" href="http://127.0.0.1:5000/UpAndPredict">Upload & Predict</a></li>
+          
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+      <a class="get-started-btn "style= "position: relative; left: 90px;" href="/login">Login</a>
+      <a href="/sign-up" class="get-started-btn scrollto">Register</a>
+  
+    </div>
+  </header><!-- End Header -->
+{% endblock %}
 {% block contents %} 
 <section id="hero" class="d-flex align-items-center justify-content-center">
     <!--Entering Login Section-->

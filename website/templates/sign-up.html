@@ -1,10 +1,35 @@
 {% extends "home.html" %}
-{% block contents %} <section id="hero" class="d-flex align-items-center justify-content-center">
+{% block navbar %}  
+<header id="header" class="fixed-top ">
+  <div class="container d-flex align-items-center justify-content-lg-between">
+
+    <a href="/" class="logo me-auto me-lg-0"><img src="{{url_for('static',filename="assets/img/1.png")}}" alt="" class="img-fluid"></a> 
+    <h1 class="logo me-auto me-lg-0"><a href="/">NailCheck<span>.</span></a></h1>
+
+    
+
+    <nav id="navbar" class="navbar order-last order-lg-0">
+      <ul>
+        <li><a class="nav-link scrollto active" href="/">Home</a></li>
+        <li><a class="nav-link scrollto" href="/">About</a></li>
+        <li><a class="nav-link scrollto" href="/">Contact Us</a></li>
+        <li><a class="nav-link scrollto" style= "position: relative; left: 150px" href="http://127.0.0.1:5000/UpAndPredict">Upload & Predict</a></li>
+        
+      </ul>
+      <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav><!-- .navbar -->
+    <a class="get-started-btn "style= "position: relative; left: 90px;" href="/login">Login</a>
+    <a href="/sign-up" class="get-started-btn scrollto">Register</a>
+
+  </div>
+</header><!-- End Header -->{%endblock %} 
+{% block contents %} 
+<section id="hero" class="d-flex align-items-center justify-content-center">
     <section id="contact" class="contact">
         <div class="container" data-aos="fade-up">
     <div class="row-lg-5 mt-8 mt-lg-0">
 
-        <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+        <form  method="POST" role="form" class="php-email-form">
           <div class="row" style="max-width:500px;">
             <h2 style="text-align: center; font-size: 40px; font-weight: 1000; color: #ffc451 ;">Sign-Up</h2>
             <h5>Name: </h5>
@@ -37,15 +62,55 @@
             </label>
           </div>
 
-        </div>
-       
-          
-          <div class="my-30">
+        </div> 
+
+          <div class="my-3">
+          {% with messages= get_flashed_messages(with_categories = true)%}
+          {% if messages %}
+            {% for category, message in messages %}
+                {% if category == 'error' %}
+                  <script>
+                    let forms = document.querySelectorAll('.php-email-form');
+
+                    forms.forEach( function(e) {
+                      e.addEventListener('submit', function(event) {
+                        event.preventDefault();
+                      
+                        let thisForm = this;
+                        thisForm.querySelector(".error-message").innerText = "{{message}}";
+                        thisForm.querySelector('.error-message').classList.add('d-block');
+                      });
+                    });
+                   </script>
+                {% else %}
+                  <script>
+                    let forms = document.querySelectorAll('.php-email-form');
+
+                    forms.forEach( function(e) {
+                      e.addEventListener('submit', function(event) {
+                        event.preventDefault();
+                      
+                        let thisForm = this;
+                        thisForm.querySelector('.sent-message').innerText = "{{message}}";
+                        thisForm.querySelector('.sent-message').classList.add('d-block');
+                      });
+                    });
+                  </script>
+                {% endif %}
+              {% endfor %}
+          {% endif %}
+          {% endwith %}
+          </div>
+          <div class="my-3">
             <div class="loading">Loading</div>
             <div class="error-message"></div>
             <div class="sent-message">Your message has been sent. Thank you!</div>
           </div>
-          <div class="text-center"><button type="submit">SIGN-UP</button></div>
+          <div class="text-center">
+            <button type="submit" style="margin-top: 0px;">
+              SIGN-UP
+            </button>
+          </div>
         </form>
 
       </div>

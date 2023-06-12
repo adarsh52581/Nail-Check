@@ -7,3 +7,7 @@ views = Blueprint('views', __name__)
 def home():
     return render_template("home.html")
 
+@views.route('/UpAndPredict')
+def Up_Predict():
+    return render_template("Up&Predict.html")
+
