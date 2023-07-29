@@ -18,8 +18,8 @@
       </ul>
       <i class="bi bi-list mobile-nav-toggle"></i>
     </nav><!-- .navbar -->
-    <a class="get-started-btn "style= "position: relative; left: 90px;" href="/login">Login</a>
-    <a href="/sign-up" class="get-started-btn scrollto">Register</a>
+    <a class="get-started-btn "style= "position: relative; left:100px" href="/login">Login</a>
+    <a href="/sign-up" class="get-started-btn ">Register</a>
 
   </div>
 </header><!-- End Header -->{%endblock %} 
@@ -84,9 +84,9 @@
                    </script>
                 {% else %}
                   <script>
-                    let forms = document.querySelectorAll('.php-email-form');
+                    let forms1 = document.querySelectorAll('.php-email-form');
 
-                    forms.forEach( function(e) {
+                    forms1.forEach( function(e) {
                       e.addEventListener('submit', function(event) {
                         event.preventDefault();
                       

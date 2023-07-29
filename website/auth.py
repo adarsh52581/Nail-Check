@@ -17,5 +17,5 @@ def sign_up():
             flash('Passwords do not match!', category='error')
         else:
             flash('Account created successfully!', category='success')
-        print(name,email,password)
+            print(name,email,password)
     return render_template("sign-up.html")

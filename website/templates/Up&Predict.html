@@ -1,4 +1,75 @@
 {% extends "home.html" %}
-
+{%  block navbar %}
+<header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center justify-content-lg-between">
+  
+      <a href="/" class="logo me-auto me-lg-0"><img src="{{url_for('static',filename="assets/img/1.png")}}" alt="" class="img-fluid"></a> 
+      <h1 class="logo me-auto me-lg-0"><a href="/">NailCheck<span>.</span></a></h1>
+  
+      
+  
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto active" href="/">Home</a></li>
+          <li><a class="nav-link scrollto" href="/">About</a></li>
+          <li><a class="nav-link scrollto" href="/">Contact Us</a></li>
+          <li><a class="nav-link scrollto" style= "position: relative; left: 150px" href="http://127.0.0.1:5000/UpAndPredict">Upload & Predict</a></li>
+          
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+      <a class="get-started-btn "style= "position: relative; left: 90px;" href="/login">Login</a>
+      <a href="/sign-up" class="get-started-btn scrollto">Register</a>
+  
+    </div>
+  </header><!-- End Header -->
+{% endblock %}
 {% block contents %}
+<section id="hero" class="d-flex">
+<div class="container">
+    <h1>Upload Nail</h1>
+    <h3 style="font-weight: 1000; font-size: 30px; padding-top: 100px; text-align: center">Please upload a clear and centered picture of your nail to generate accurate predictions !<h3>
+    <div class="container align-items-center">
+    <div class="row align-items-center">
+    
+        <h2 style="text-align: center; font-weight: 500; padding-bottom: 50px" >Select a file to upload</h2>
+        <form method="POST" class="php-email-form" enctype="multipart/form-data" action="/submit" role="form">
+          <dl>
+                    <input type="file" name="file" class="form-control" autocomplete="off">  
+          </dl>
+                <button type="submit" value="Submit" class="get-started-btn" style="background:#ffbb38;">Submit</button>
+          <div class="my-3">
+              <!-- {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                  <ul>
+                  {% for message in messages %}
+                    <script>
+                      let forms1 = document.querySelectorAll('.php-email-form');
+  
+                      forms1.forEach( function(e) {
+                        e.addEventListener('submit', function(event) {
+                          event.preventDefault();
+                        
+                          let thisForm = this;
+                          thisForm.querySelector('.sent-message').innerText = "{{value}}";
+                          thisForm.querySelector('.sent-message').classList.add('d-block');
+                        });
+                      });
+                    </script>
+                  {% endfor %} 
+                  </ul>
+                {% endif %}
+              {% endwith %} -->
+            </div>
+            <div class="my-3">
+              <div class="error-message"></div>
+              <div class="sent-message">{{text}}</div>
+            </div>
+          </form>
+    </div>
+    </div>
+
+</div>
+</section>    
+
 {% endblock %}
