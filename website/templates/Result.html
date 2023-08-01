@@ -1,0 +1,92 @@
+{% extends "home.html" %}
+{% block navbar %}  
+<header id="header" class="fixed-top ">
+  <div class="container d-flex align-items-center justify-content-lg-between">
+
+    <a href="/" class="logo me-auto me-lg-0"><img src="{{url_for('static',filename="assets/img/1.png")}}" alt="" class="img-fluid"></a> 
+    <h1 class="logo me-auto me-lg-0"><a href="/">NailCheck<span>.</span></a></h1>
+
+    
+
+    <nav id="navbar" class="navbar order-last order-lg-0">
+      <ul>
+        <li><a class="nav-link scrollto active" href="/">Home</a></li>
+        <li><a class="nav-link scrollto" href="/">About</a></li>
+        <li><a class="nav-link scrollto" href="/">Contact Us</a></li>
+        <li><a class="nav-link scrollto" style= "position: relative; left: 150px" href="http://127.0.0.1:5000/UpAndPredict">Upload & Predict</a></li>
+        
+      </ul>
+      <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav><!-- .navbar -->
+    <a class="get-started-btn "style= "position: relative; left:100px" href="/login">Login</a>
+    <a href="/sign-up" class="get-started-btn ">Register</a>
+
+  </div>
+</header><!-- End Header -->{%endblock %} 
+{% block contents %}
+<section id="hero" class="d-flex">
+<div class="container">
+    <h1 style="text-align: left; font-size: xx-large;">RESULT:</h1>
+    {% if text== "Healthy Nail" %}
+      <h1 style="text-align: left; font-size: x-large;" >Healthy Nail !</h1>
+    <h3 style="font-weight: 500;">Great news! Your nail diagnosis indicates that you have healthy nails. Keep up the good work in taking care of them, and if you have any questions or concerns, don't hesitate to reach out to a healthcare professional.
+    </h3>
+    <br/>
+    <h3 style="font-weight: 500;">Please consult a medical professional to verify and analyze your condition so as to start treatment at the earliest if applicable ! </h3>
+    {% elif text=="Terry's Nail" %}
+    <h1 style="text-align: left; font-size: x-large;">Terry's Nail</h1>
+    <br/>
+    <h3 style="font-weight: 500;">Terry's nail is a nail disorder characterized by a white or light pink band at the tip of the nail, while the rest of the nail appears dark or opaque. The condition is named after Dr. Richard Terry, who first described it. Terry's nail can be associated with several underlying health conditions, such as liver disease, congestive heart failure, kidney failure, and diabetes. It is believed to be caused by a reduction in blood flow to the nail bed, leading to changes in nail color and appearance.
+    </h3>
+    <br/>
+    <h3 style="font-weight: 500;">Please consult a medical professional to verify and analyze your condition so as to start treatment at the earliest if applicable ! </h3>
+    {% elif text=="Koilonychia" %}
+    <h1 style="text-align: left; font-size: x-large;">Koilonychia</h1>
+    <br/>
+    <h3 style="font-weight: 500;">Koilonychia, also known as spoon nails, is a condition where the nails become thin, soft, and concave, resembling a spoon's shape. The central part of the nail bed sinks inward, while the edges are raised. Koilonychia can be a sign of iron deficiency anemia or other underlying health conditions. It can also be caused by repeated exposure to chemicals, trauma to the nail, or a genetic predisposition.
+    </h3>
+    <br/>
+    <h3 style="font-weight: 500;">Please consult a medical professional to verify and analyze your condition so as to start treatment at the earliest if applicable ! </h3>
+    {% elif text=="Clubbing" %}
+    <h1 style="text-align: left; font-size: x-large;">Clubbing</h1>
+    <br/>
+    <h3 style="font-weight: 500;">Clubbing refers to the enlargement and rounding of the fingertips and nails. The nails may curve downward and the nail base may appear swollen. This condition is often associated with various respiratory and cardiovascular diseases, such as lung cancer, chronic lung infections, congenital heart defects, and other conditions that reduce the amount of oxygen in the blood. Clubbing is thought to result from increased blood flow to the fingertips and changes in the connective tissue around the nails.
+    </h3>
+    <br/>
+    <h3 style="font-weight: 500;">Please consult a medical professional to verify and analyze your condition so as to start treatment at the earliest if applicable ! </h3>
+    {% elif text=="Acral Lentiginous Melanoma" %}
+    <h1 style="text-align: left; font-size: x-large;">Acral Lentiginous Melanoma</h1>
+    <br/>
+    <h3 style="font-weight: 500;">Acral lentiginous melanoma (ALM) is a type of skin cancer that appears on the palms of the hands, soles of the feet, or under the nails. It is the most common type of melanoma in people with darker skin. ALM often starts as a dark streak or band on the nail, which may be mistaken for a benign condition initially. Early detection and prompt treatment are crucial for a better prognosis.
+    </h3>
+    <br/>
+    <h3 style="font-weight: 500;">Please consult a medical professional to verify and analyze your condition so as to start treatment at the earliest if applicable ! </h3>
+    {% elif text=="Nail Pitting" %}
+    <h1 style="text-align: left; font-size: x-large;">Nail Pitting</h1>
+    <br/>
+    <h3 style="font-weight: 500;">Nail pitting is a condition characterized by the presence of small depressions or pits on the surface of the nails. It is commonly associated with psoriasis, an autoimmune skin disorder. The pitting occurs due to abnormal keratinization in the nail matrix, leading to irregular nail growth. Other conditions that can cause nail pitting include eczema, alopecia areata, and reactive arthritis.
+    </h3>
+    <br/>
+    <h3 style="font-weight: 500;">Please consult a medical professional to verify and analyze your condition so as to start treatment at the earliest if applicable ! </h3>
+    {%elif text=="Onychogryphosis" %}
+    <h1 style="text-align: left; font-size: x-large;">Onychogryphosis</h1>
+    <br/>
+    <h3 style="font-weight: 500;">Onychogryphosis, also known as ram's horn nails, is a nail disorder where the nails become thickened, elongated, and excessively curved, resembling a ram's horn. This condition is often caused by long-term neglect and lack of proper nail care, leading to overgrowth and distortion of the nail. Onychogryphosis is commonly observed in older adults and individuals with limited mobility.
+    </h3>
+    <br/>
+    <h3 style="font-weight: 500;">Please consult a medical professional to verify and analyze your condition so as to start treatment at the earliest if applicable ! </h3>
+    {% elif text=="Bluish Nail" %}
+    <h1 style="text-align: left; font-size: x-large;">Bluish Nail</h1>
+    <br/>
+    <h3 style="font-weight: 500;">Bluish nails, also called blue nails or cyanosis, refer to the bluish discoloration of the nails. This condition is caused by reduced oxygen levels in the blood, leading to poor circulation and oxygenation of the nails. Bluish nails can be a symptom of various underlying health issues, including respiratory problems, circulatory disorders, and congenital heart defects.
+    </h3>
+    <br/>
+    <h3 style="font-weight: 500;">Please consult a medical professional to verify and analyze your condition so as to start treatment at the earliest if applicable ! </h3>
+    {% else %}
+    <h3 style="font-weight: 500;"> The model could not predict the nail disease based on the symptoms learned by the model! <br/> NailCheck strongly recommends you to consult a doctor for further analysis</h3>
+    {% endif %}
+    <br/><br/><br/><br/><br/><br/><br/><br/>
+    <h3 style="font-weight: 500;">Note: The prediction provided by the model may not be 100% accurate and we strongly recommend you to consult a medical professional for a more comprehensive analysis of your condition!</h3>
+</div>
+</section>
+{% endblock %}

@@ -49,12 +49,10 @@ def submit():
       rf = Roboflow(api_key="S0ZRXr8KslM5xZVGkV9N")
       project = rf.workspace().project("nailcheck")
       model = project.version(1).model
-      # print(model.predict("D:/NadiNoufal/Files/Carreer/Projects/NailDiseaseDetectionSystem - S6 MiniProject/website/static/uploads/"+file.filename).json())
       data=model.predict("D:/NadiNoufal/Files/Carreer/Projects/NailDiseaseDetectionSystem - S6 MiniProject/website/static/uploads/"+file.filename).json()
       value = data['predictions'][0]['top']
       print(value)
-      #flash(value)
-      return render_template("Up&Predict.html",text=value)
+      return render_template("Result.html",text=value)
   else:
       flash('Allowed image types are - png, jpg, jpeg, gif')
       return render_template("Up&Predict.html")
